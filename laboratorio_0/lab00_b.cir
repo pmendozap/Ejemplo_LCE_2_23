@@ -1,0 +1,10 @@
+.TITLE Circuito ohm ac
+.op
+V1 N1 0 dc 0 sin 0 1 2k 0 0 0
+R1 N1 0 1k
+.control
+    tran 1u 12m 10m 
+    print v(N1) i(V1) > out_00_b.txt
+.endc
+.print op n1
+.END
